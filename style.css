@@ -1,0 +1,493 @@
+/* ==========================================================================
+   北産歯科医院｜共通スタイル
+   カラー・レイアウト・レスポンシブ設定をここで変更できます。
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Shippori+Mincho:wght@400;500;600&display=swap");
+:root {
+    --blue: #91cde4;
+    --pale: #e8f6fc;
+    --ink: #39484d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Noto Sans JP",sans-serif;
+    font-weight: 300;
+    line-height: 2;
+    letter-spacing: .07em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+header {
+    height: 86px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(4vw,20px);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: 0 1px 12px #9ab9c51c;
+}
+
+.brand {
+    color: #85c6df;
+    font-family: "Shippori Mincho",serif;
+    font-size: 25px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: #6eb9d6;
+}
+
+.book {
+    background: var(--blue);
+    color: #fff;
+    padding: 13px 24px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.book small {
+    display: block;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+.hamb {
+    display: none;
+}
+
+.hero {
+    height: min(690px,65vw);
+    min-height: 420px;
+    background: #eaf5f7;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    position: absolute;
+    right: 8%;
+    bottom: 12%;
+    font: 500 clamp(25px,3.2vw,46px)/1.9 "Shippori Mincho",serif;
+    letter-spacing: .16em;
+    color: #34464b;
+    text-shadow: 0 1px 8px #ffffffbd;
+}
+
+.wrap {
+    max-width: 1100px;
+    margin: auto;
+    padding: 100px 28px;
+}
+
+.eyebrow {
+    font: 400 48px/1.2 Georgia,serif;
+    letter-spacing: .12em;
+    color: var(--blue);
+    margin: 0 0 8px;
+}
+
+.jp {
+    color: #83c3dc;
+    font-size: 13px;
+    margin: 0 0 34px;
+}
+
+.lead {
+    font-size: 17px;
+    line-height: 2.2;
+    margin-bottom: 45px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.split img {
+    aspect-ratio: 1.5;
+}
+
+.serif {
+    font-family: "Shippori Mincho",serif;
+    font-size: 24px;
+    line-height: 2.1;
+}
+
+.more {
+    display: inline-block;
+    margin-top: 18px;
+    border-bottom: 1px solid #8abed1;
+    padding: 8px 24px 8px 0;
+}
+
+.tint {
+    background: var(--pale);
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.tile {
+    background: white;
+    padding: 22px;
+    text-align: center;
+    transition: .2s;
+    border: 1px solid #cce5f0;
+}
+
+.tile:hover {
+    background: #f7fcff;
+    transform: translateY(-3px);
+}
+
+.wide-image {
+    height: 420px;
+    object-fit: cover;
+}
+
+.cta {
+    text-align: center;
+    margin-top: 52px;
+}
+
+.cta a {
+    display: inline-block;
+    background: var(--blue);
+    color: #fff;
+    padding: 15px 55px;
+}
+
+.news-row {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #e1e9ed;
+    font-size: 14px;
+}
+
+.news-row time {
+    white-space: nowrap;
+}
+
+.pill {
+    background: #b1deee;
+    color: white;
+    border-radius: 50px;
+    padding: 0 20px;
+    font-size: 11px;
+}
+
+.access {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+}
+
+.access img {
+    height: 330px;
+}
+
+.access h3 {
+    color: #87c7df;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+footer {
+    background: var(--blue);
+    color: white;
+    text-align: center;
+    padding: 58px 20px 30px;
+}
+
+footer h2 {
+    font: 32px Georgia,serif;
+    letter-spacing: .1em;
+    margin: 0;
+}
+
+footer .phone {
+    font: 32px Georgia,serif;
+}
+
+footer .footnav {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin: 25px 0;
+}
+
+footer small {
+    font-size: 11px;
+}
+
+.pagehead {
+    text-align: center;
+    padding: 75px 20px 30px;
+}
+
+.pagehead .eyebrow {
+    font-size: 58px;
+}
+
+.service-list {
+    max-width: 1060px;
+    margin: auto;
+    padding: 20px 25px 110px;
+}
+
+.service-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+    margin: 45px 0 80px;
+}
+
+.service-item img {
+    height: 330px;
+}
+
+.service-item h2 {
+    font: 500 25px "Shippori Mincho",serif;
+    margin: 0 0 20px;
+}
+
+.service-item p {
+    white-space: pre-line;
+    font-size: 15px;
+}
+
+.menu-open {
+    display: flex !important;
+}
+
+@media (max-width:850px) {
+    header {
+        height: 70px;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .hamb {
+        display: block;
+        background: none;
+        border: 0;
+        font-size: 27px;
+        color: #75bcd8;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 24px;
+        box-shadow: 0 8px 15px #0001;
+    }
+
+    nav .book {
+        width: 100%;
+    }
+
+    .hero {
+        min-height: 470px;
+        background-position: 40% center;
+    }
+
+    .hero h1 {
+        right: 5%;
+        bottom: 10%;
+        font-size: 27px;
+    }
+
+    .wrap {
+        padding: 65px 22px;
+    }
+
+    .eyebrow {
+        font-size: 39px;
+    }
+
+    .split,.access,.service-item {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .tiles {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wide-image {
+        height: 260px;
+    }
+
+    .service-item {
+        margin: 20px 0 65px;
+    }
+
+    .service-item img {
+        height: 270px;
+    }
+
+    .pagehead .eyebrow {
+        font-size: 46px;
+    }
+}
+@media (max-width:500px) {
+    .tiles {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 23px;
+    }
+
+    .news-row {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .pill {
+        padding: 0 12px;
+    }
+
+    .serif {
+        font-size: 21px;
+    }
+}
+/* Supplied photo assets and hero slideshow */
+.hero-slides,.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slide {
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    transition: opacity 1.25s ease;
+}
+
+.hero-slide.is-active {
+    opacity: 1;
+}
+
+.hero h1 {
+    z-index: 1;
+}
+
+.access img {
+    object-fit: contain;
+    background: #f4f9fc;
+}
+
+.service-item img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+#concept,#maintenance,#news,#access,.service-item {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width:850px) {
+    .hero-slide {
+        object-position: center;
+    }
+
+    .access img {
+        height: 350px;
+        object-fit: contain;
+    }
+}
+@media (prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero-slide {
+        transition: none;
+    }
+}
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    flex: 0 0 auto;
+}
+
+.brand span {
+    display: block;
+}
+
+.footer-logo {
+    width: min(180px,42vw);
+    margin: 0 auto 18px;
+    object-fit: contain;
+}
+
+@media (max-width:850px) {
+    .brand img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand {
+        gap: 10px;
+    }
+}
